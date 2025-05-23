@@ -1,5 +1,6 @@
 {
   "name": "url-parsing",
+  "homepage": "https://vanichh.github.io/url-parsing/",
   "private": false,
   "version": "0.0.2",
   "author": {
@@ -12,7 +13,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "classnames": "^2.5.1",
