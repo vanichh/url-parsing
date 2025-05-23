@@ -7,6 +7,10 @@ export const GetParamsUrl = () => {
 
   console.log("paramsUrl", paramsUrl);
 
+  if (paramsUrl.length <= 1) {
+    return <p>Get параметров в url не найденно</p>;
+  }
+
   return (
     <section>
       {paramsUrl.map(([key, value]) => (

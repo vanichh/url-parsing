@@ -4,6 +4,7 @@ import { BaseLayout } from "../../layouts/base-layout";
 import { useStore } from "@store";
 import s from "./HomePage.module.scss";
 import { UrlInfo } from "./components/url-info";
+import { HeaderHome } from "./components/header-home";
 
 export const HomePage = () => {
   const isError = useStore((store) => store.isError);
@@ -11,7 +12,7 @@ export const HomePage = () => {
   return (
     <BaseLayout>
       <div className={s.root}>
-        <h1 className={s.root__title}>Парсинг url</h1>
+        <HeaderHome />
         <FormParsing />
         {isError ? <ErrorParsing /> : <UrlInfo />}
       </div>
