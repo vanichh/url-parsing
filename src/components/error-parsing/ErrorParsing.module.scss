@@ -1,0 +1,16 @@
+.root {
+  margin-top: 60px;
+
+  &__title {
+    font-size: 20px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &__error {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    font-style: italic;
+  }
+}

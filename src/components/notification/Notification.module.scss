@@ -1,0 +1,15 @@
+.root {
+  position: fixed;
+  opacity: 0;
+  transition: 0.2s ease;
+  width: 200px;
+  right: 0;
+  top: 0;
+
+  &__title {
+    margin: 10px 10px 0 0;
+    padding: 10px;
+    outline: 1px solid black;
+    border-radius: 10px;
+  }
+}

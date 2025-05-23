@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+
+  &:nth-of-type(2n) {
+    background-color: #d9e1f2;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__text_name {
+    flex-shrink: 0;
+  }
+
+  &__text_value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: auto;
+  }
+
+  &__button {
+    flex-shrink: 0;
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+  }
+}

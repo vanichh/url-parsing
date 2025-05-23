@@ -1,0 +1,22 @@
+.root {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    &:nth-of-type(2n) {
+      background-color: #d9e1f2;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__text_name {
+    flex-shrink: 0;
+  }
+}
