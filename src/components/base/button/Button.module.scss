@@ -1,0 +1,10 @@
+.root {
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &__disabled {
+    pointer-events: none;
+    border-color: rgba(16, 16, 16, 0.3);
+  }
+}

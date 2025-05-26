@@ -1,23 +1,20 @@
 import { useStore } from "@store";
+import s from "./GetParamsUrl.module.scss";
+import { NameParams } from "@components/params-url/components/name-params/NameParams";
 
 export const GetParamsUrl = () => {
   const valueUrl = useStore((store) => store.valueUrl);
 
   const paramsUrl = [...new URLSearchParams(valueUrl)];
+  paramsUrl.shift();
 
-  console.log("paramsUrl", paramsUrl);
-
-  if (paramsUrl.length <= 1) {
-    return <p>Get параметров в url не найденно</p>;
-  }
+  const title = paramsUrl.length <= 1 ? "Get параметров не найденно" : "Get парамметры";
 
   return (
-    <section>
+    <section className={s.root}>
+      <p className={s.root__title}>{title}</p>
       {paramsUrl.map(([key, value]) => (
-        <>
-          <div>{key}</div>
-          <div>{value}</div>
-        </>
+        <NameParams key={key} name={key} value={value} />
       ))}
     </section>
   );

@@ -1,6 +1,7 @@
 import { useStore } from "@store";
 import type { OnChangeType, OnSubmitType } from "./types";
 import s from "./FormParsing.module.scss";
+import { Button } from "@components/base/button";
 
 export const FormParsing = () => {
   const { isError, setIsError, setValueUrl, valueUrl, setUrl, setErrorValue } = useStore();
@@ -31,9 +32,9 @@ export const FormParsing = () => {
   return (
     <form className={s.root} onSubmit={onSubmit}>
       <input className={s.root__input} value={valueUrl} onChange={onChange} />
-      <button className={s.root__button} type="submit">
+      <Button disabled={valueUrl.length < 5} className={s.root__button} type="submit">
         Распарсить
-      </button>
+      </Button>
     </form>
   );
 };
